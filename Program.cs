@@ -13,11 +13,16 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapGet("/up", () => {
+    Console.WriteLine("Health Check Triggered");
+    return "OK";
+    });
 
 app.MapStaticAssets();
 app.MapRazorPages()
