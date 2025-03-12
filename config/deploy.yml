@@ -1,0 +1,13 @@
+service: your-app-name
+image: ghcr.io/<your-gh-username>/<your-app-name>
+
+servers:
+  - 127.0.0.1  # WSL instance running locally
+
+registry:
+  server: ghcr.io
+  username: <your-gh-username>
+  password: <your-ghcr-token>
+
+builder:
+  multiarch: false
