@@ -16,7 +16,7 @@ WORKDIR /app
 COPY --from=build /publish ./
 
 # Expose port and run
-EXPOSE 8080
+EXPOSE 5174 7065
 # HEALTHCHECK --interval=20s --timeout=15s --retries=3 CMD curl -f http://localhost:8080/up || exit 1
 
 CMD ["dotnet", "SampleWebApp.dll"]
